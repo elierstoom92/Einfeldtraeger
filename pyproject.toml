@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "einfeldtraeger"
+version = "0.1.0"
+description = "Berechnung eines Einfeldträgers mit Strecken- und Einzellast"
+authors = [{name = "Generated"}]
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["beam", "structural engineering", "mechanics"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+einfeldtraeger = "einfeldtraeger.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
